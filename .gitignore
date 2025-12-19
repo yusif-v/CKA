@@ -1,0 +1,21 @@
+# --- Obsidian ---
+# This ignores all settings, plugins, themes, and workspaces
+.obsidian/
+
+# --- System Files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+.trash/
+.spellcheck.json
+
+# --- Temporary/Cache Files ---
+*.tmp
+*.log
+.empty-folder
+.sync.ffs_db
+.sync/
+
+# --- Mobile/Cloud specific ---
+.icloud
