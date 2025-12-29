@@ -8,7 +8,7 @@ Kubernetes cluster consists of a control plane (master nodes) that manages the c
 ### Control Plane
 
 - **API Server**: Serves as the central hub for all cluster operations and communications.
-- [[Etcd]]: Distributed key-value store holding the cluster's configuration and state data.
+- [[etcd]]: Distributed key-value store holding the cluster's configuration and state data.
 - **Scheduler**: Watches for newly created pods and assigns them to appropriate nodes.
 - **Controller Manager**: Oversees various controllers, such as node controller and replication controller, to maintain desired cluster state.
 
