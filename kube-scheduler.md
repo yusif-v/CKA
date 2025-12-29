@@ -49,7 +49,7 @@ Scheduling is a **single decision**, not a continuous reconciliation loop.
 
 ## Interaction with Control Plane
 
-- Watches Pods via kube-apiserver
+- Watches Pods via [[kube-apiserver]]
 - Writes binding objects back to kube-apiserver
 - Does not communicate with kubelet directly
 - Does not access etcd
