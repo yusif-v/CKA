@@ -22,13 +22,13 @@ ReplicaSets are the **successor to [[Replication Controller]]** and are most com
 ## Pod Selection
 - Supports **set-based label selectors**
 - Examples:
-```bash
+```yaml
 selector:
   matchLabels:
     app: web
 ```
 
-```bash
+```yaml
 selector:
   matchExpressions:
   - key: tier
@@ -61,7 +61,7 @@ This flexibility is a major improvement over Replication Controllers.
 
 ## Configuration Example
 
-```bash
+```yaml
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:

@@ -1,4 +1,3 @@
-
 ## Overview
 
 A **Replication Controller (RC)** ensures that a specified number of **Pod replicas** are running at any given time. If Pods fail, are deleted, or nodes go down, the controller creates new Pods to maintain the desired replica count.
@@ -24,7 +23,7 @@ Replication Controller is largely **superseded by [[ReplicaSet Controller]]**, b
 
 - Uses **equality-based selectors only**
 - Example:
-```bash
+```yaml
 selector:
   app: web
 ```
@@ -49,7 +48,7 @@ Limitation:
 
 ## Configuration Example
 
-```bash
+```yaml
 apiVersion: v1
 kind: ReplicationController
 metadata:
@@ -92,4 +91,3 @@ kubectl describe rc <name>
     - [[ReplicaSet Controller]]
     - [[Deployment]]
 - Modern clusters use Deployments instead
-
