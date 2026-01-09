@@ -1,4 +1,4 @@
-
+#architecture
 ## Overview
 
 The kube-controller-manager runs a set of core Kubernetes controllers that continuously reconcile **desired state vs current state**. It watches the kube-apiserver for changes and takes actions to move the cluster toward the declared configuration.

@@ -1,3 +1,4 @@
+#architecture
 ## Overview
 
 The kube-scheduler is the Kubernetes control-plane component responsible for **assigning Pods to Nodes**. It watches for newly created Pods without a nodeName and selects the most suitable node based on resource availability, constraints, and scheduling policies.

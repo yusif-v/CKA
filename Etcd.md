@@ -1,4 +1,4 @@
-#cli 
+#cli #architecture
 ## Overview
 
 etcd is a highly available, distributed key-value store that serves as the backend database for Kubernetes. It stores all cluster data, including configuration, state, and metadata for resources like Pods, Services, Deployments, and ConfigMaps. etcd ensures strong consistency using the Raft consensus algorithm, which handles leader elections, data replication, and fault tolerance during network partitions or node failures. It operates as a clustered system, typically with 3, 5, or 7 nodes to maintain an odd-numbered quorum for majority-based decisions.

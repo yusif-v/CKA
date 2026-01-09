@@ -1,4 +1,5 @@
-## **Overview**
+#architecture
+## Overview
 
 kube-proxy runs on **every worker node** and maintains network rules to allow **Pods to communicate with each other and with Services**. It abstracts cluster networking so Services have a **stable virtual IP**, independent of Pod lifecycle.
 
