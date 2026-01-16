@@ -58,7 +58,7 @@ kubectl expose pod nginx --port=80 --target-port=80
 
 #### NodePort
 
-```
+```bash
 kubectl expose deployment web \
   --type=NodePort \
   --port=80 \
