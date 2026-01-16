@@ -1,4 +1,4 @@
-# DaemonSet
+# DaemonSets
 ## Overview
 
 A **DaemonSet** ensures that **a copy of a Pod runs on every Node** (or a selected set of Nodes) in the cluster.

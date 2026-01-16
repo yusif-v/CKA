@@ -25,7 +25,7 @@ Rules:
 
 ## Where Labels Are Used
 
-- [[Service]] selectors
+- [[Services]] selectors
 - [[ReplicaSet Controller]] Pod matching
 - [[Deployment Controller]] rollout logic
 - [[NetworkPolicy]] targeting

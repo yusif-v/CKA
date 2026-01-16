@@ -37,7 +37,7 @@ selector:
 ```
 
 Used in:
-- [[Service]]
+- [[Services]]
 - [[Replication Controller]]
 - [[ReplicaSet Controller]]
 
