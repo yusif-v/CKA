@@ -29,34 +29,18 @@ These workloads must run **once per Node**, not per application.
 
 Unlike [[Deployments]] or [[ReplicaSets]], you do **not** specify replicas.
 
----
-
-## **Scheduling Behavior**
+## Scheduling Behavior
 
 - DaemonSet Pods **bypass normal replica scheduling**
-    
 - Pods are automatically scheduled onto Nodes
-    
 - Node selection can still be controlled using:
-    
     - [[Node Selectors]]
-        
     - [[Node Affinity]]
-        
     - [[Taints]] and [[Tolerations]]
-        
-    
 
----
-
-## **Taints and DaemonSets**
-
-  
+## Taints and DaemonSets
 
 DaemonSets often tolerate Node taints automatically.
-
-  
-
 Example toleration:
 
 ```
@@ -65,38 +49,22 @@ tolerations:
 ```
 
 This allows DaemonSet Pods to run on:
-
 - Master / control-plane Nodes
-    
 - Special-purpose Nodes
-    
 
----
-
-## **Resource Management**
-
-  
+## Resource Management
 
 DaemonSet Pods support:
-
 - [[Resource Requests]]
-    
 - [[Resource Limits]]
-    
-
-  
 
 Requests are especially important to prevent Node overcommitment since every Node runs one copy.
 
----
-
-## **Update Strategies**
-
-  
+## Update Strategies
 
 DaemonSets support rolling updates:
 
-```
+```yaml
 updateStrategy:
   type: RollingUpdate
   rollingUpdate:
@@ -105,11 +73,9 @@ updateStrategy:
 
 This updates Pods node-by-node.
 
----
+## DaemonSet Definition File
 
-## **DaemonSet Definition File**
-
-```
+```yaml
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
@@ -132,49 +98,33 @@ spec:
             memory: "128Mi"
 ```
 
----
-
-## **Observability and Debugging**
-
-  
+## Observability and Debugging
 
 Check DaemonSet status:
 
-```
+```bash
 kubectl get daemonsets
 ```
 
 Inspect details:
 
-```
+```bash
 kubectl describe daemonset <name>
 ```
 
 Check Pods per Node:
 
-```
+```bash
 kubectl get pods -o wide
 ```
 
----
-
-## **Key Mental Model**
-
-  
+## Key Mental Model
 
 DaemonSet =
-
 **exactly one Pod per Node** (by default)
 
-  
-
 Think:
-
 - Deployments scale by **replicas**
-    
 - DaemonSets scale by **Nodes**
-    
-
-  
 
 This makes them essential for **infrastructure-level workloads**, not application logic.

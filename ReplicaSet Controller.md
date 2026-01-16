@@ -22,6 +22,7 @@ ReplicaSets are the **successor to [[Replication Controller]]** and are most com
 ## Pod Selection
 - Supports **set-based label selectors**
 - Examples:
+
 ```yaml
 selector:
   matchLabels:
