@@ -10,7 +10,7 @@ Static Pods are mainly used for **control-plane components**.
 ## Key Characteristics
 
 - Created and managed by [[kubelet]]
-- **No controller** ([[ReplicaSet]], [[Deployment]], etc.)
+- **No controller** ([[ReplicaSet]], [[Deployments]], etc.)
 - **Not scheduled** by [[kube-scheduler]]
 - Defined locally on the Node
 - Automatically restarted if they fail

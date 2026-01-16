@@ -12,7 +12,7 @@ Limits exist to protect the **Node** from resource exhaustion handled by the [[k
 Resource Limits affect:
 - CPU usage (throttling)
 - Memory usage (OOM termination)
-- Runtime behavior of containers inside a [[Pod]]
+- Runtime behavior of containers inside a [[Pods]]
 
 They do **not** influence placement decisions made during [[Scheduling]].
 

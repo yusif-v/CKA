@@ -72,9 +72,9 @@ kubectl diff -f manifest.yaml
 ## Manifest Types
 
 Manifests can define any Kubernetes object:
-- [[Pod]]
+- [[Pods]]
 - [[ReplicaSet]]
-- [[Deployment]]
+- [[Deployments]]
 - [[DaemonSets]]
 - [[Services]]
 - [[ConfigMap]]

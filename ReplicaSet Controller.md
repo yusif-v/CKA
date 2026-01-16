@@ -103,5 +103,5 @@ kubectl describe rs <name>
 ## Relationship to Other Workloads
 
 - Replaces [[Replication Controller]]
-- Managed by [[Deployment]]
+- Managed by [[Deployments]]
 - Parent controller: [[Deployment Controller]]

@@ -89,5 +89,5 @@ kubectl describe rc <name>
 
 - Predecessor to:
     - [[ReplicaSet Controller]]
-    - [[Deployment]]
+    - [[Deployments]]
 - Modern clusters use Deployments instead
