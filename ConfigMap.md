@@ -20,13 +20,13 @@ ConfigMap stores key-value pairs in three ways:
 
 1. **Literal key-value pairs** (imperative)
 
-```
+```bash
 kubectl create configmap my-config --from-literal=key1=value1
 ```
 
 2. **From file**
 
-```
+```bash
 kubectl create configmap my-config --from-file=config.properties
 ```
 
@@ -55,7 +55,7 @@ data:
 
 ### 1. Environment Variables
 
-```
+```yaml
 spec:
   containers:
   - name: app
@@ -67,7 +67,7 @@ spec:
 
 ### 2. Mounted as Files
 
-```
+```yaml
 spec:
   containers:
   - name: app

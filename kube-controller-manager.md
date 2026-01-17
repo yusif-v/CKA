@@ -1,75 +1,106 @@
-#architecture
+# kube-controller-manager
 ## Overview
 
-The kube-controller-manager runs a set of core Kubernetes controllers that continuously reconcile **desired state vs current state**. It watches the kube-apiserver for changes and takes actions to move the cluster toward the declared configuration.
+The **kube-controller-manager** runs a collection of **controllers** that continuously watch the cluster and **reconcile actual state with desired state**.
 
-All actions are performed **via the kube-apiserver**; it does not talk directly to nodes or etcd.
+It is the **engine of automation** in Kubernetes.
 
-## Controllers
+If the API server is the brain, the controller manager is the reflex system.
 
-Each controller is a control loop:
-- Watch objects through kube-apiserver
-- Compare desired vs actual state
-- Reconcile differences
-- Repeat continuously (idempotent behavior)
+## Role in the Control Plane
 
-## Key Controllers
+- Connects to [[kube-apiserver]]
+- Watches objects stored in etcd
+- Takes action when reality diverges from the specification
+- Runs as a **Static Pod** on control-plane nodes
+
+Without it, nothing heals, scales, or self-corrects.
+
+## Controller Model
+
+Each controller follows the same loop:
+1. Watch resources via the API
+2. Detect state differences
+3. Take corrective action
+4. Repeat forever
+
+This is the **reconciliation loop**.
+
+## Core Controllers (High-Level)
+
+The kube-controller-manager includes many controllers, such as:
 
 - [[Node Controller]]
-- [[Replication Controller]]
 - [[ReplicaSet Controller]]
 - [[Deployment Controller]]
-- [[Endpoint Controller]]
-- [[EndpointSlice Controller]]
+- [[DaemonSet Controller]]
 - [[Namespace Controller]]
-- [[ServiceAccount Controller]]
-- [[Token Controller]]
+- [[Service Account Controller]]
 - [[Job Controller]]
-- [[PersistentVolume Controller]]
-## Interaction with Control Plane
+- [[Endpoint Controller]]
 
-- Watches resources using shared informers    
-- Writes updates via REST API calls
-- Does **not** access etcd directly
-- All controllers run in one binary but operate independently
+Each controller is logically independent.
 
-## High Availability Behavior
+## Leader Election
 
-- Multiple instances supported    
-- Leader election ensures a single active controller
-- Standby instances remain idle
-- Uses Lease objects in kube-system
+In HA clusters:
+- Multiple controller-manager instances run
+- Only one is **active leader**
+- Others stay in standby
 
-## **Configuration**
-### **Deployment**
+Leader election uses **leases stored in etcd**.
 
-- Static Pod:
-    /etc/kubernetes/manifests/kube-controller-manager.yaml
+## Communication Flow
 
-### **Important Flags**
+- Watches objects through [[kube-apiserver]]
+- Never talks to [[kubelet]] directly
+- All actions go through the API server
 
-- --leader-elect=true    
+This preserves strict control-plane boundaries.
+
+## Failure Behavior
+
+If kube-controller-manager stops:
+- No new Pods are created
+- Failed Pods are not replaced
+- Scaling stops
+- Cluster state slowly decays
+
+Existing Pods continue running.
+
+## Configuration
+
+Configured using command-line flags or config file.
+Common flags:
 - --controllers=*
+- --leader-elect=true
+- --cluster-signing-cert-file
 - --node-monitor-period
-- --pod-eviction-timeout
-- --use-service-account-credentials
 
-### **Authentication & Authorization**
+Runs as a Static Pod defined in:
 
-- Uses client certificates to authenticate    
-- Authorized via RBAC
-- Controller-specific ServiceAccounts supported
+```bash
+/etc/kubernetes/manifests/kube-controller-manager.yaml
+```
 
-## **Monitoring and Health**
+## Observability
 
-- /healthz    
-- /metrics
-- Common metrics:
-    - workqueue_depth
-    - controller_runtime_reconcile_total
+Check status:
 
-## **Troubleshooting**
+```bash
+kubectl get pods -n kube-system
+```
 
-- Pods not recreated → [[ReplicaSet Controller]]
-- Nodes NotReady → [[Node Controller]]
-- Namespace stuck Terminating → [[Namespace Controller]] (finalizers)
+View logs:
+
+```bash
+kubectl logs kube-controller-manager-<node> -n kube-system
+```
+
+## Key Mental Model
+
+The kube-controller-manager is **Kubernetes’ immune system**.
+It doesn’t deploy workloads itself.
+It watches, notices drift, and relentlessly pushes the cluster back toward equilibrium.
+Declarative intent goes in.
+Relentless correction comes out.
