@@ -16,6 +16,7 @@ VPA does **not** change the number of Pods.
 🔗 Related:
 - [[Resource Requests]]
 - [[Resource Limits]]
+- [[VPA Installation]]
 
 ## How VPA Works
 
