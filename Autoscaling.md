@@ -11,7 +11,7 @@ Kubernetes supports autoscaling at **three levels**:
 
 Autoscaling keeps applications **responsive**, **cost-efficient**, and **stable under load**.
 
-## Horizontal Pod Autoscaler (HPA)
+## [[Horizontal Pod Autoscaler]] (HPA)
 ### What it does
 
 Scales the **number of Pods** based on metrics.
@@ -61,7 +61,7 @@ HPA **requires resource requests** to be set on containers.
 kubectl autoscale deployment web --min=2 --max=10 --cpu-percent=50
 ```
 
-## Vertical Pod Autoscaler (VPA)
+## [[Vertical Pod Autoscaler]] (VPA)
 
 ### What it does
 
