@@ -14,9 +14,7 @@ It acts as a smart entry point that can:
 
 Ingress = _Layer 7 (HTTP/HTTPS) Traffic Router_
 
----
-
-## **Why Ingress Exists**
+## Why Ingress Exists
 
   
 
