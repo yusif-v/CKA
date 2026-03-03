@@ -71,6 +71,7 @@ aliases: [CKA Index, Kubernetes Exam, CKA Home]
 - [[Network Policy]] — Pod-level firewall rules
 - [[Namespaces]] — Cluster partitioning
 - [[Network Namespaces]] — Linux-level network isolation
+* [[Gateway API]] — Official Ingress successor, multi-protocol routing
 
 ## 07 — Storage
 
