@@ -38,6 +38,7 @@ aliases: [CKA Index, Kubernetes Exam, CKA Home]
 - [[kubeadm]] — Bootstrap and lifecycle tool
 - [[minikube]] — Local development cluster
 - [[Kubeconfig]] — Connection and auth configuration
+- [[Addons]] — CNI, CoreDNS, metrics-server and other cluster extensions
 
 ## 03 — CLI Tools
 
