@@ -47,6 +47,7 @@ aliases: [CKA Index, Kubernetes Exam, CKA Home]
 - [[etcdctl]] — etcd client for backup/restore
 - [[etcdutl]] — Offline etcd data tool
 - [[API Groups]] — Understanding Kubernetes API structure
+- [[Helm]] — Kubernetes package manager; charts, releases, and lifecycle management
 
 ## 04 — Workloads
 
