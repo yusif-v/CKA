@@ -54,6 +54,7 @@ aliases: [CKA Index, Kubernetes Exam, CKA Home]
 - [[Init Containers]] — Pre-startup setup containers
 - [[Deployments]] — Stateless app management
 - [[DaemonSets]] — One Pod per node
+- [[ReplicaSets]] — Pod count enforcement, Deployment internals
 
 ## 05 — Scheduling
 
