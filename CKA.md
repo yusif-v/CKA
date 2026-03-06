@@ -48,6 +48,7 @@ aliases: [CKA Index, Kubernetes Exam, CKA Home]
 - [[etcdutl]] — Offline etcd data tool
 - [[API Groups]] — Understanding Kubernetes API structure
 - [[Helm]] — Kubernetes package manager; charts, releases, and lifecycle management
+- [[Kustomize]] — Template-free config management with base/overlay pattern, built into kubectl
 
 ## 04 — Workloads
 
