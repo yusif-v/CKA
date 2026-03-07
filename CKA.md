@@ -97,6 +97,7 @@ aliases: [CKA Index, Kubernetes Exam, CKA Home]
 - [[Security Contexts]] — Container privilege model
 - [[Image Security]] — Supply chain and registry security
 - [[Custom Resource Definition]] — API extensions
+- [[ServiceAccounts]] — Pod identity for API authentication; token automount, RBAC binding, and imagePullSecrets
 
 ## 10 — Operations
 
