@@ -288,7 +288,6 @@ spec:
 - [[Secrets]] — Secret generators work identically to ConfigMap generators
 - [[Namespaces]] — Overlays commonly override namespace per environment
 - [[Labels]] — `commonLabels` field stamps all resources in a kustomization
-- [[Dev Tools]] — Kustomize pairs with ArgoCD and Flux for GitOps workflows
 
 ## Key Mental Model
 
