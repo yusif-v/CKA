@@ -58,6 +58,7 @@ aliases: [CKA Index, Kubernetes Exam, CKA Home]
 - [[Deployments]] — Stateless app management
 - [[DaemonSets]] — One Pod per node
 - [[ReplicaSets]] — Pod count enforcement, Deployment internals
+- [[Jobs and CronJobs]] — Finite batch tasks (Job) and scheduled execution (CronJob); completions, parallelism, cron syntax
 
 ## 05 — Scheduling
 
