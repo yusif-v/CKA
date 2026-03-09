@@ -76,6 +76,7 @@ aliases: [CKA Index, Kubernetes Exam, CKA Home]
 - [[Namespaces]] — Cluster partitioning
 - [[Network Namespaces]] — Linux-level network isolation
 * [[Gateway API]] — Official Ingress successor, multi-protocol routing
+- [[CoreDNS]] — Cluster DNS server; Service name resolution, Corefile config, and DNS troubleshooting
 
 ## 07 — Storage
 
