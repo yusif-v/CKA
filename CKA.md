@@ -112,6 +112,7 @@ aliases: [CKA Index, Kubernetes Exam, CKA Home]
 - [[Troubleshooting Guide]] — Master troubleshooting workflow
 - [[Node Troubleshooting]] — Node-level diagnosis
 - [[Pod Troubleshooting]] — Pod and container diagnosis
+- [[Application Failure Troubleshooting]] — End-to-end workflow for diagnosing broken apps: pods, services, endpoints, DNS, NetworkPolicy, and Ingress
 
 ## 12 — Reference
 
