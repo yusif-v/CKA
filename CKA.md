@@ -49,6 +49,7 @@ aliases: [CKA Index, Kubernetes Exam, CKA Home]
 - [[API Groups]] — Understanding Kubernetes API structure
 - [[Helm]] — Kubernetes package manager; charts, releases, and lifecycle management
 - [[Kustomize]] — Template-free config management with base/overlay pattern, built into kubectl
+- [[crictl]] — CRI command-line tool for direct container runtime access when kubectl is unavailable; used for node-level container and image inspection
 
 ## 04 — Workloads
 
@@ -113,7 +114,7 @@ aliases: [CKA Index, Kubernetes Exam, CKA Home]
 - [[Node Troubleshooting]] — Node-level diagnosis
 - [[Pod Troubleshooting]] — Pod and container diagnosis
 - [[Application Failure Troubleshooting]] — End-to-end workflow for diagnosing broken apps: pods, services, endpoints, DNS, NetworkPolicy, and Ingress
-
+- [[Control Plane Failure Troubleshooting]] — Systematic diagnosis for broken kube-apiserver, etcd, scheduler, and controller-manager using static pod manifests, kubelet, journalctl, and crictl
 ## 12 — Reference
 
 - [[Exam Cheatsheet]] — Quick-access exam commands
