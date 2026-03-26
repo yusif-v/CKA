@@ -114,7 +114,9 @@ aliases: [CKA Index, Kubernetes Exam, CKA Home]
 - [[Node Troubleshooting]] — Node-level diagnosis
 - [[Pod Troubleshooting]] — Pod and container diagnosis
 - [[Application Failure Troubleshooting]] — End-to-end workflow for diagnosing broken apps: pods, services, endpoints, DNS, NetworkPolicy, and Ingress
-- [[Control Plane Failure Troubleshooting]] — Systematic diagnosis for broken kube-apiserver, etcd, scheduler, and controller-manager using static pod manifests, kubelet, journalctl, and crictl
+- [[Control Plane Failure Troubleshooting]] — Systematic diagnosis for broken kube-apiserver, etcd, scheduler, and controller-manager using static pod manifests, kubelet, journalctl, and crictl 
+- [[Network Troubleshooting]] — Service connectivity, DNS failures, NetworkPolicy debugging, and CNI diagnosis
+
 ## 12 — Reference
 
 - [[Exam Cheatsheet]] — Quick-access exam commands
