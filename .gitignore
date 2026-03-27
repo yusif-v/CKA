@@ -1,21 +1,33 @@
-# --- Obsidian ---
-# This ignores all settings, plugins, themes, and workspaces
+# ======================
+# Git
+# ======================
+.git/
+.gitignore
+.gitattributes
+.gitmodules
+.gitkeep
+
+# ======================
+# Obsidian
+# ======================
 .obsidian/
-
-# --- System Files ---
-.DS_Store
-Thumbs.db
-desktop.ini
-$RECYCLE.BIN/
 .trash/
-.spellcheck.json
+.smart-connections/
 
-# --- Temporary/Cache Files ---
-*.tmp
-*.log
-.empty-folder
-.sync.ffs_db
-.sync/
-
-# --- Mobile/Cloud specific ---
-.icloud
+# ======================
+# macOS
+# ======================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
