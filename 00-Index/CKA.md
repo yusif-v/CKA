@@ -95,7 +95,8 @@ aliases: [CKA Index, Kubernetes Exam, CKA Home]
 - [[Secrets]] — Sensitive data storage; base64 encoding, types, and best practices
 - [[Environment Variables]] — Runtime config injection; literals, ConfigMaps, Secrets, Downward API
 - [[Resource Limits]] — CPU and memory requests/limits; QoS classes, LimitRange, ResourceQuota
-
+- [[ResourceQuota]] — Namespace-level resource consumption caps; compute, object count, and storage limits
+- [[LimitRange]] — Per-container and per-Pod resource bounds; injects default requests and limits into Pods automatically
 ## 09 — Security
 
 - [[RBAC]] — Role-based access control; Roles, ClusterRoles, bindings, and testing
